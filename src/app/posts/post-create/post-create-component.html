@@ -1,0 +1,92 @@
+<h1>post create component</h1>
+<textarea name="son" id="" cols="30" rows="5" [value]="newpost" #ref></textarea>
+<textarea matInput name="son" id="" cols="30" rows="5" [(ngModel)]="enter"></textarea>
+<textarea rows="5" cols="5" [(ngModel)]="ng1"></textarea>
+<button (click)="on(ref)"> Save post</button>
+<button (click)="ng()">ng model value</button>
+<button (click)="ngmm()"> Ng click</button>
+<p>
+  {{newpost}}
+</p>
+<h1>{{son}}</h1>
+<mat-icon aria-hidden="false" aria-label="Example home icon"></mat-icon>
+<mat-form-field class="example-form-field" appearance="fill">
+ 
+  <input matInput type="text" [(ngModel)]="value" placeholder="Name">
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    sonet thomas
+  </button>
+
+</mat-form-field>
+<mat-card>Simple card</mat-card>
+<section>
+  <div class="example-label">Flat</div>
+  <div class="example-button-row">
+    <button mat-button color="primary">Primary</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
+    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<App-Header></App-Header>
+
+<section>
+  <div class="example-label">Raised</div>
+  <div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+  <input matInput name="title" [(ngModel)]="enteredTitle" placeholder="title"/>
+
+<input matInput name="discription" [(ngModel)]="entereddiscription" placeholder="discription"/>
+
+<button mat-raised-button color="accent" (click)=" onAddpost()">Save Post</button>
+
+
+
+<form (submit)="onadd(postData)" #postData="ngForm">
+  <input
+  mat-Input
+  type="text"
+  name="title"
+  ngModel
+  required
+  maxlength="5"
+  #title="ngModel"
+  />
+  <mat-error *ngIf="title.touched">Enter the correct title</mat-error>
+  <input
+  mat_input
+  type="text"
+  required
+  maxlength="5"
+  name="content"/><button
+  type="submit">
+  Save Post
+  </button>
+  </form>
+  <form>
+  </form>
+  

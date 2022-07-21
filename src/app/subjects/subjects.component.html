@@ -1,0 +1,33 @@
+
+<table style="border: 1px solid black; text-align: center; width: 100%;">
+    <tr>
+        <th>Credits</th>
+        <th>Name</th>
+        <th>Teacher</th>
+    </tr>
+    <tr *ngFor="let a of sub">
+        <td>
+            {{a.credits}}
+        </td>
+        
+        <td>
+            {{a.name}}
+        </td>
+        <td>
+            {{a.teacher}}
+        </td>
+        
+        <td>
+            <button mat-button color="primary" (click)="modal(a)">Click</button>
+        </td>
+        <td>
+            classroom:{{a.classRoom}}
+        </td>
+        <td>
+            classroom:{{a.sonet}}
+        </td>
+        <td>
+            <button mat-button color="primary"  (click)="modalSubject(a)">Assign To classRoom</button>
+        </td>
+    </tr>
+</table>

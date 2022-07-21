@@ -1,0 +1,28 @@
+<h1>
+    ClassRoom Data
+</h1>
+<table style="border: 1px solid black; text-align: center; width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>Layout</th>
+        <th>Name</th>
+        <th>Size</th>
+    </tr>
+    <tr *ngFor="let a of arr.classrooms">
+        <td>
+            {{a.id}}
+        </td>
+        <td>
+            {{a.layout}}
+        </td>
+        <td>
+            {{a.name}}
+        </td>
+        <td>
+            {{a.size}}
+        </td>
+        <td>
+            <button mat-button color="primary" (click)="modal(a)">Click</button>
+        </td>
+    </tr>
+</table>

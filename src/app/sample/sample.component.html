@@ -1,0 +1,56 @@
+<!-- <h1>Tony varghese</h1>
+<h1>sonet</h1> -->
+<!-- <button (click)="visibilty()">visibilty</button> -->
+<!-- <h1 *ngIf="v">Visibility on</h1> -->
+<!-- <h1 *ngIf="!v; else temp2">Visibiliity off</h1>
+<button (click)="snack()">snackbar</button>
+
+<ng-template #temp1>
+<h1>Ng tepmlate displayed</h1>
+</ng-template>
+<ng-template  #temp2>
+    <h1 style="color: brown;"> hlo template one how are you?</h1>
+</ng-template>
+<!-- <button [routerLink]="['/more more']">more</button> -->
+<!-- <h1 *ngFor="let ar of arr">{{ar.id}}''{{ar.name}}</h1>
+<div class="comp">
+<app-post-create (PostCreated)="OPostCraeted($event)"></app-post-create>
+<app-post-list [post1]="posts"></app-post-list>
+<modal></modal>
+</div>
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+    <input type="text" ngModel placeholder="body" name="body">
+    <input type="text" ngModel placeholder="title" name="title">
+    <button type="submit">submit</button>
+</form> --> -->
+<app-base></app-base>
+<table style="border: 1px solid black; text-align: center; width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Size</th>
+    </tr>
+    <tr *ngFor="let a of son.students">
+        <td>
+            {{a.id}}
+        </td>
+        
+        <td>
+            {{a.name}}
+        </td>
+        <td>
+            {{a.age}}
+        </td>
+        <td>
+            {{a.email}}
+        </td>
+        
+        <td>
+            <button mat-button color="primary" (click)="modal(a)">Click</button>
+        </td>
+    </tr>
+</table>
+<div *ngIf="dataSource !== undefined">
+    <app-table [data]="dataSource"></app-table>
+</div>

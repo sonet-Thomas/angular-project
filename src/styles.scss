@@ -1,0 +1,43 @@
+.snackbar-container {
+    position: fixed;
+   
+    background: rgba(0, 0, 0, 0.6);
+    color: #b6e8bb;
+
+    padding: 1em;
+    font-size: 12px;
+    animation: snackbarIn 0.5s;
+    transform: translateX(-50%);
+   
+  }
+  
+  @keyframes snackbarIn {
+    from {
+      transform: translateX(-50%) translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      ransform: translateX(-50%) translateY(100px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes snackbarOut {
+    to {
+      transform: translateX(-50%) translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+  * {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+
+  .test {
+    background: #1abc9c;
+    color: blue;
+  }
+  ::ng-deep .mat-snack-bar-container{
+      background: red;
+  }

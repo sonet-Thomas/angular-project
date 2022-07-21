@@ -1,0 +1,86 @@
+<h1 mat-dialog-title>Hi 
+</h1>
+<div mat-dialog-content *ngIf="data.type==='classroom'">
+  <mat-form-field >
+    ID:
+    {{data.id}}
+  </mat-form-field>
+  <mat-form-field >
+    Name:
+    {{data.name}}
+  </mat-form-field>
+  <mat-form-field >
+    Size:
+    {{data.size}}
+  </mat-form-field>
+  <mat-form-field >
+    Layout:
+    {{data.layout}} 
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">OK</button>
+    <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+  </div>
+  
+</div>
+
+<div mat-dialog-content *ngIf="data.type==='student'">
+  <mat-form-field >
+    ID:
+    {{data.id}}
+  </mat-form-field>
+  <mat-form-field >
+    Name:
+    {{data.name}}
+  </mat-form-field>
+  <mat-form-field >
+    Age:
+    {{data.age}}
+  </mat-form-field>
+  <mat-form-field >
+    Email:
+    {{data.email}} 
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">OK</button>
+    <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+  </div>
+  
+</div>
+
+<div mat-dialog-content *ngIf="data.type==='subject'">
+    Subject Name:
+    {{data.name}}
+    credits:
+    {{data.credits}}
+  
+    Teacher:
+    {{data.teacher}} 
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">OK</button>
+    <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+  </div>
+  </div>
+  <div mat-dialog-content *ngIf="data.type==='subject To class'">
+  
+      Subject Name:
+      {{data.name}}
+    
+      credits:
+      {{data.credits}}
+ 
+    
+      Teacher:
+      {{data.teacher}} 
+   
+    
+      <span> Select Classroom</span>
+      <select  aria-placeholder="Classrooms" [(ngModel)]="model"> Classroom
+        <option *ngFor="let item of data.classRoom">{{item}}</option>
+      </select>
+   
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">OK</button>
+      <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+    </div>
+    </div>

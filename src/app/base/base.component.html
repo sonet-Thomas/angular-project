@@ -1,0 +1,23 @@
+<p>base works!</p>
+<p>Sonet Thomas</p>
+<h1>Input Form</h1>
+<div class="baseForm">
+  Welcome
+</div>
+
+<p
+  [id]="sayHelloId"
+  [style.color]="fontColor">
+  You can set my color in the component!
+</p>
+<button
+  type="button"
+  [disabled]="canClick"
+  (click)="sayMessage()">
+  Trigger alert message
+</button>
+<button (click)="onEditable()">
+    make text editable
+</button>
+<div *ngIf="edit; else noedit">Edit the document</div>
+<ng-template  [ngOutletContext]="message" #noedit>not edit</ng-template>

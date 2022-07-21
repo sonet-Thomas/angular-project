@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+.snackbar-container {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #b6e8bb;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    font-size: 12px;
+    animation: snackbarIn 0.5s;
+    transform: translateX(-50%);
+    min-width: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @keyframes snackbarIn {
+    from {
+      transform: translateX(-50%) translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      ransform:  translateY(100px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes snackbarOut {
+    to {
+      transform: translateX(-50%) translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+  * {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .snackbar-container button {
+    background: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 30px;
+  }
+  .comp{
+    margin-top: 100px;
+  }

@@ -1,0 +1,13 @@
+<h1>Tony varghese</h1>
+<Mat-accordion >
+    <mat-expansion-panel *ngFor="let pos of post1">
+        <mat-expansion-panel-header>
+            {{pos.title}}
+        </mat-expansion-panel-header>
+        <p>{{pos.content}}</p>
+    </mat-expansion-panel>
+</Mat-accordion>
+<mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group>  
